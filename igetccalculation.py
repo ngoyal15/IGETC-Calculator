@@ -1,7 +1,19 @@
 import xlrd
+import pandas as pd
 
 
 path = "book.xlsx"
+df = pd.read_excel(path)
+pd.set_option('display.max_columns', 70)
+print(df)
+
+sample = ["ENGL 101A", "MATH 101A","CHEM 101A","IS 110","HIST 105"]
+
+for col in list(df)
+	try:
+		df[df.eq(sample(0)).any(1)]
+	except TypeError:
+		continue
 inputWorkbook = xlrd.open_workbook(path)
 inputWorksheet = inputWorkbook.sheet_by_index(0)
 
